@@ -3,6 +3,7 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.utils.getQualifiedClassName;
+	import flash.utils.getDefinitionByName;
 	
 	public class Main extends Sprite 
 	{
@@ -39,8 +40,8 @@ package
 		{
 			if (getQualifiedClassName(e) == getQualifiedClassName(Number))
 				return int;
-			
-			return Boolean;
+					
+			return (getDefinitionByName("Boolean") as Class);
 		}
 		
 	}
